@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-export const StyledBack = styled.a``;
-
-export const Nav = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
+export const StyledBack = styled.a`
+  display: inline-block;
+  padding: 1rem;
+  background: ${({ theme }) => theme.color};
 `;
 
 export const Menu = styled.div`

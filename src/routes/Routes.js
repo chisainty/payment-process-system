@@ -6,6 +6,7 @@ import Products from "../pages/Products";
 const theme = {
   colors: {
     primaryColor: "#2a41cb",
+    blueColor: "#2a41cb",
     whiteColor: "#ffffff",
     primaryDark: "#0d1440",
     whiteShade: "#f2f8ff",

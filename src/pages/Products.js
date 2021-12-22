@@ -1,5 +1,11 @@
+import Back from "../components/Back";
+
 const Products = () => {
-  return <div>Products Page</div>;
+  return (
+    <>
+      <Back />
+    </>
+  );
 };
 
 export default Products;
