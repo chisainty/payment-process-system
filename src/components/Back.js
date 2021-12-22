@@ -2,9 +2,9 @@ import { StyledBack } from "./styles/Back.styled";
 
 const Back = () => {
   return (
-    <Back>
+    <StyledBack>
       <img src="images/icons/back.png" alt="back btn" />
-    </Back>
+    </StyledBack>
   );
 };
 
