@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
 export const StyledCenterSlider = styled.div`
+  margin-top: 2rem;
+
+  & .slick-track {
+    display: flex;
+  }
   & .slick-slide {
     background-color: #f6f6f8;
     height: 289px;
     width: 230px;
-    transition: height .5s ease-out;
+    margin-top: -2rem;
     margin-right: 0.5rem;
     border-radius: 0.6rem;
   }
 
   & .slick-active {
     color: #f1f1f1;
-    height: 350px;
+    margin-top: 10px;
   }
 `;
 
