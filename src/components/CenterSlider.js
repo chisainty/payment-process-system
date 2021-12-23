@@ -4,7 +4,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import { StyledCenterSlider, Quantity } from "./styles/CenterSlider.styled";
 
 const CenterSlider = () => {
-  let bottle = useState(1);
+  const [bottle, setBottle] = useState(1);
 
   const settings = {
     className: "center",
@@ -14,7 +14,11 @@ const CenterSlider = () => {
     slidesToShow: 1,
     speed: 500,
   };
-  
+
+  const incrementBottle = () => {
+    setBottle(bottle + 1);
+  };
+
   return (
     <>
       <StyledCenterSlider>
@@ -40,9 +44,9 @@ const CenterSlider = () => {
           <span>Quantity</span>
           <div>
             <img src="images/icons/bottle.svg" alt="" />
-            <span>1</span>
+            <span>{bottle}</span>
             <span>Bottle</span>
-            <IoIosAddCircle onClick={()=> bottle++} />
+            <IoIosAddCircle onClick={incrementBottle} />
           </div>
         </Quantity>
       </StyledCenterSlider>
