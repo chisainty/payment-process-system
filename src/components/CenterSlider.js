@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Slider from "react-slick";
 import { IoIosAddCircle } from "react-icons/io";
 import { StyledCenterSlider, Quantity } from "./styles/CenterSlider.styled";
 
 const CenterSlider = () => {
+  let bottle = useState(1);
+
   const settings = {
     className: "center",
     centerMode: true,
@@ -11,6 +14,7 @@ const CenterSlider = () => {
     slidesToShow: 1,
     speed: 500,
   };
+  
   return (
     <>
       <StyledCenterSlider>
@@ -35,11 +39,11 @@ const CenterSlider = () => {
         <Quantity>
           <span>Quantity</span>
           <div>
-            <img src="" alt="" />
+            <img src="images/icons/bottle.svg" alt="" />
             <span>1</span>
-            <span></span>
+            <span>Bottle</span>
+            <IoIosAddCircle onClick={()=> bottle++} />
           </div>
-          <IoIosAddCircle />
         </Quantity>
       </StyledCenterSlider>
     </>

@@ -33,7 +33,7 @@ export const StyledCenterSlider = styled.div`
     margin-top: 10px;
   }
 
-  & img {
+  & .slick-slide img {
     position: absolute;
   }
 
@@ -59,9 +59,30 @@ export const Quantity = styled.div`
   background-color: #f6f6f8;
   display: flex;
   padding: 1rem;
-  width: 12rem;
+  width: 217px;
   margin: auto;
-  border-radius: 1rem;
+  transform: translateX(-4%);
+  border-radius: 33px;
+  justify-content: space-between;
+  font-size: 13px;
+
+  & > span {
+    color: #979aa1;
+  }
+
+  & div img {
+    height: 21px;
+  }
+
+  & div span {
+    margin-right: 0.2rem;
+  }
+  /* & div > span:nth-child(2) {
+    margin-left: 0.2rem;
+  } */
+  & div > svg{
+    font-size: 20px;
+  }
 `;
 
 // export const Showcase = styled.div`
