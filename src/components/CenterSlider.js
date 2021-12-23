@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { IoIosAddCircle } from "react-icons/io";
 import { StyledCenterSlider, Quantity } from "./styles/CenterSlider.styled";
@@ -8,11 +8,6 @@ const CenterSlider = () => {
   const [currentProduct, setCurrentProduct] = useState(0);
 
   const [data, setData] = useState([
-    {
-      img: "main.png",
-      id: 0,
-      quantity: 1,
-    },
     {
       img: "main.png",
       id: 1,
@@ -28,6 +23,11 @@ const CenterSlider = () => {
       id: 3,
       quantity: 1,
     },
+    {
+      img: "main.png",
+      id: 4,
+      quantity: 1,
+    },
   ]);
 
   const settings = {
@@ -40,12 +40,34 @@ const CenterSlider = () => {
   };
 
   const incrementBottle = () => {
-    setBottle(bottle + 1);
-    const array = data.filter((item) => {
-      return item.id === currentProduct;
-    });
-    console.log(array);
+    // const index = data.findIndex((item) => {
+    //   return item.id === currentProduct;
+    // });
+
+    //increment the quantity of the product by one
+    data[currentProduct].quantity += 1;
+    setData([...data]);
+
+    //display the product details by it ID
+    displayProduct(data[currentProduct].id);
   };
+
+  const swipeAction = (index) => {
+    setCurrentProduct(index);
+    displayProduct(data[index].id);
+  };
+
+  const displayProduct = (id) => {
+    const array = data.filter((item) => {
+      return item.id === id;
+    });
+    setBottle(array[0].quantity);
+  };
+
+  useEffect(() => {
+    //update the bottle quantity fro the current product
+    displayProduct(data[currentProduct].id);
+  }, [data]);
 
   return (
     <>
@@ -53,7 +75,7 @@ const CenterSlider = () => {
         <Slider
           {...settings}
           onSwipe={() => setBottle(1)}
-          afterChange={(index) => setCurrentProduct(index)}
+          afterChange={(index) => swipeAction(index)}
         >
           {data.map((data, index) => {
             return (
