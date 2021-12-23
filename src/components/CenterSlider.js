@@ -1,5 +1,6 @@
 import Slider from "react-slick";
-import { StyledCenterSlider } from "./styles/CenterSlider.styled";
+import { IoIosAddCircle } from "react-icons/io";
+import { StyledCenterSlider, Quantity } from "./styles/CenterSlider.styled";
 
 const CenterSlider = () => {
   const settings = {
@@ -31,6 +32,15 @@ const CenterSlider = () => {
             <img src="images/icons/check.png" alt="check" />
           </div>
         </Slider>
+        <Quantity>
+          <span>Quantity</span>
+          <div>
+            <img src="" alt="" />
+            <span>1</span>
+            <span></span>
+          </div>
+          <IoIosAddCircle />
+        </Quantity>
       </StyledCenterSlider>
     </>
   );

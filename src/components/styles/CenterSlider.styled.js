@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const StyledCenterSlider = styled.div`
   padding-top: 2rem;
 
-  & .slick-slider, .slick-list {
+  & .slick-slider {
+    height: 20rem;
+  }
+  & .slick-list {
     overflow: visible;
   }
 
-  & .slick-track  {
+  & .slick-track {
     display: flex;
     overflow: visible;
   }
@@ -52,13 +55,14 @@ export const StyledCenterSlider = styled.div`
   }
 `;
 
-// export const Menu = styled.div`
-//   display: none;
-
-//   @media (max-width: ${({ theme }) => theme.mobile}) {
-//     display: block;
-//   }
-// `;
+export const Quantity = styled.div`
+  background-color: #f6f6f8;
+  display: flex;
+  padding: 1rem;
+  width: 12rem;
+  margin: auto;
+  border-radius: 1rem;
+`;
 
 // export const Showcase = styled.div`
 //   display: flex;
