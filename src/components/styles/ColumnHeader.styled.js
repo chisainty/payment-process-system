@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
 export const StyledColumnHeader = styled.div`
-  padding: 1rem 0 0 3rem;
+  padding: 1.5rem 0 0 4rem;
 
   & h2 {
     font-family: "Roboto Condensed", sans-serif;
     font-size: 35px;
     line-height: 32px;
+    height: 32px;
+    margin-bottom: 1rem;
   }
   & p {
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #596273;
-
   }
 `;
 

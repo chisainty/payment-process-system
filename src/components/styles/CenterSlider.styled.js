@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
 export const StyledCenterSlider = styled.div`
-  margin-top: 2rem;
+  padding-top: 2rem;
 
-  & .slick-track {
-    display: flex;
+  & .slick-slider, .slick-list {
+    overflow: visible;
   }
+
+  & .slick-track  {
+    display: flex;
+    overflow: visible;
+  }
+
   & .slick-slide {
     background-color: #f6f6f8;
     height: 289px;
@@ -13,11 +19,36 @@ export const StyledCenterSlider = styled.div`
     margin-top: -2rem;
     margin-right: 0.5rem;
     border-radius: 0.6rem;
+    margin-right: 1rem;
+    transition: 0.5s;
+    position: relative;
+    z-index: 4000;
   }
 
   & .slick-active {
     color: #f1f1f1;
     margin-top: 10px;
+  }
+
+  & img {
+    position: absolute;
+  }
+
+  & img:first-child {
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+  }
+
+  & img:last-child {
+    right: -10px;
+    top: 16px;
+    width: 1.9rem;
+    display: none;
+  }
+
+  & .slick-active img:last-child {
+    display: block;
   }
 `;
 

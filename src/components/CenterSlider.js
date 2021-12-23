@@ -6,7 +6,7 @@ const CenterSlider = () => {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "30px",
+    centerPadding: "70px",
     slidesToShow: 1,
     speed: 500,
   };
@@ -15,22 +15,20 @@ const CenterSlider = () => {
       <StyledCenterSlider>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <img src="images/products/main.png" alt="main" />
+            <img src="images/icons/check.png" alt="check" />
           </div>
           <div>
-            <h3>2</h3>
+            <img src="images/products/main.png" alt="main" />
+            <img src="images/icons/check.png" alt="check" />
           </div>
           <div>
-            <h3>3</h3>
+            <img src="images/products/main.png" alt="main" />
+            <img src="images/icons/check.png" alt="check" />
           </div>
           <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
+            <img src="images/products/main.png" alt="main" />
+            <img src="images/icons/check.png" alt="check" />
           </div>
         </Slider>
       </StyledCenterSlider>
