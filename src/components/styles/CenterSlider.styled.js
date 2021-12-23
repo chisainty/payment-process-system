@@ -4,7 +4,7 @@ export const StyledCenterSlider = styled.div`
   padding-top: 2rem;
 
   & .slick-slider {
-    height: 20rem;
+    height: 15rem;
   }
   & .slick-list {
     overflow: visible;
@@ -17,7 +17,7 @@ export const StyledCenterSlider = styled.div`
 
   & .slick-slide {
     background-color: #f6f6f8;
-    height: 289px;
+    height: 230px;
     width: 230px;
     margin-top: -2rem;
     margin-right: 0.5rem;
@@ -30,16 +30,17 @@ export const StyledCenterSlider = styled.div`
 
   & .slick-active {
     color: #f1f1f1;
-    margin-top: 10px;
+    margin-top: -15px;
   }
 
   & .slick-slide img {
     position: absolute;
   }
 
-  & img:first-child {
+  & .slick-slide img:first-child {
     left: 50%;
     top: 0px;
+    height: 230px;
     transform: translateX(-50%);
   }
 
@@ -72,14 +73,13 @@ export const Quantity = styled.div`
 
   & div img {
     height: 21px;
+    margin-right:.3rem;
   }
 
   & div span {
     margin-right: 0.2rem;
   }
-  /* & div > span:nth-child(2) {
-    margin-left: 0.2rem;
-  } */
+
   & div > svg{
     font-size: 20px;
   }
