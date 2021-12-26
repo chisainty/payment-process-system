@@ -58,15 +58,14 @@ export const StyledCenterSlider = styled.div`
 
 export const Quantity = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   & > div:nth-child(2) {
     background-color: #f6f6f8;
     display: flex;
     padding: 1rem;
     width: 217px;
-    margin: auto;
-    transform: translateX(-4%);
+    margin: 0 .5rem;
     border-radius: 33px;
     justify-content: space-between;
     font-size: 13px;
