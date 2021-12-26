@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { IoIosAdd } from "react-icons/io";
+import { IoIosAdd, IoIosRemove } from "react-icons/io";
 import {
   StyledCenterSlider,
   Quantity,
@@ -55,6 +55,20 @@ const CenterSlider = () => {
     //display the product details by it ID
     displayProduct(data[currentProduct].id);
   };
+
+  const decrementBottle = () => {
+    // const index = data.findIndex((item) => {
+    //   return item.id === currentProduct;
+    // });
+
+    //increment the quantity of the product by one
+    data[currentProduct].quantity -= 1;
+    setData([...data]);
+
+    //display the product details by it ID
+    displayProduct(data[currentProduct].id);
+  };
+
 
   const swipeAction = (index) => {
     setCurrentProduct(index);
