@@ -73,14 +73,14 @@ export const Quantity = styled.div`
 
   & div img {
     height: 21px;
-    margin-right:.3rem;
+    margin-right: 0.3rem;
   }
 
   & div span {
     margin-right: 0.2rem;
   }
 
-  & div > svg{
+  & div > svg {
     font-size: 20px;
   }
 `;

@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { IoIosAddCircle } from "react-icons/io";
-import { StyledCenterSlider, Quantity } from "./styles/CenterSlider.styled";
+import { IoIosAdd } from "react-icons/io";
+import {
+  StyledCenterSlider,
+  Quantity,
+  StyledRounded,
+} from "./styles/CenterSlider.styled";
 
 const CenterSlider = () => {
   const [bottle, setBottle] = useState(1);
@@ -87,13 +91,20 @@ const CenterSlider = () => {
           })}
         </Slider>
         <Quantity>
-          <span>Quantity</span>
+          <StyledRounded>
+            <IoIosRemove onClick={decrementBottle}/>
+          </StyledRounded>
           <div>
-            <img src="images/icons/bottle.svg" alt="" />
-            <span>{bottle}</span>
-            <span>Bottle</span>
-            <IoIosAddCircle onClick={incrementBottle} />
+            <span>Quantity</span>
+            <div>
+              <img src="images/icons/bottle.svg" alt="" />
+              <span>{bottle}</span>
+              <span>Bottle</span>
+            </div>
           </div>
+          <StyledRounded>
+            <IoIosAdd onClick={incrementBottle} />
+          </StyledRounded>
         </Quantity>
       </StyledCenterSlider>
     </>
