@@ -49,6 +49,7 @@ const CenterSlider = () => {
     // });
 
     //increment the quantity of the product by one
+
     data[currentProduct].quantity += 1;
     setData([...data]);
 
@@ -61,10 +62,11 @@ const CenterSlider = () => {
     //   return item.id === currentProduct;
     // });
 
-    //increment the quantity of the product by one
-    data[currentProduct].quantity -= 1;
-    setData([...data]);
-
+    //decrement the quantity of the product by one
+    if (data[currentProduct].quantity > 1) {
+      data[currentProduct].quantity -= 1;
+      setData([...data]);
+    }
     //display the product details by it ID
     displayProduct(data[currentProduct].id);
   };
@@ -105,7 +107,7 @@ const CenterSlider = () => {
         </Slider>
         <Quantity>
           <Rounded>
-            <IoIosRemove onClick={decrementBottle}/>
+            <IoIosRemove onClick={decrementBottle} />
           </Rounded>
           <div>
             <span>Quantity</span>
