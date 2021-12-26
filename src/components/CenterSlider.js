@@ -4,7 +4,7 @@ import { IoIosAdd, IoIosRemove } from "react-icons/io";
 import {
   StyledCenterSlider,
   Quantity,
-  StyledRounded,
+  Rounded,
 } from "./styles/CenterSlider.styled";
 
 const CenterSlider = () => {
@@ -69,7 +69,6 @@ const CenterSlider = () => {
     displayProduct(data[currentProduct].id);
   };
 
-
   const swipeAction = (index) => {
     setCurrentProduct(index);
     displayProduct(data[index].id);
@@ -105,9 +104,9 @@ const CenterSlider = () => {
           })}
         </Slider>
         <Quantity>
-          <StyledRounded>
+          <Rounded>
             <IoIosRemove onClick={decrementBottle}/>
-          </StyledRounded>
+          </Rounded>
           <div>
             <span>Quantity</span>
             <div>
@@ -116,9 +115,9 @@ const CenterSlider = () => {
               <span>Bottle</span>
             </div>
           </div>
-          <StyledRounded>
+          <Rounded>
             <IoIosAdd onClick={incrementBottle} />
-          </StyledRounded>
+          </Rounded>
         </Quantity>
       </StyledCenterSlider>
     </>

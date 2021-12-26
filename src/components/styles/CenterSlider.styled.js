@@ -57,17 +57,22 @@ export const StyledCenterSlider = styled.div`
 `;
 
 export const Quantity = styled.div`
-  background-color: #f6f6f8;
   display: flex;
-  padding: 1rem;
-  width: 217px;
-  margin: auto;
-  transform: translateX(-4%);
-  border-radius: 33px;
   justify-content: space-between;
-  font-size: 13px;
 
-  & > span {
+  & > div:nth-child(2) {
+    background-color: #f6f6f8;
+    display: flex;
+    padding: 1rem;
+    width: 217px;
+    margin: auto;
+    transform: translateX(-4%);
+    border-radius: 33px;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  & > div:nth-child(2) span {
     color: #979aa1;
   }
 
@@ -79,6 +84,20 @@ export const Quantity = styled.div`
   & div span {
     margin-right: 0.2rem;
   }
+
+  & div > svg {
+    font-size: 20px;
+  }
+`;
+
+export const Rounded = styled.div`
+  background-color: #f6f6f8;
+  display: flex;
+  padding: 1rem;
+  /* width: 2rem; */
+  border-radius: 50%;
+  justify-content: space-between;
+  font-size: 13px;
 
   & div > svg {
     font-size: 20px;
