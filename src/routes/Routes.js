@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes as Routers } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../components/styles/utils/Global";
-import Products from "../pages/Products";
+// import { GlobalStyles } from "../components/styles/utils/Global";
+import Index from "../pages/Index";
 
 const theme = {
   colors: {
@@ -22,7 +22,7 @@ const Routes = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routers>
-          <Route exact path="/" element={<Products />} />
+          <Route exact path="/" element={<Index />} />
         </Routers>
       </BrowserRouter>
     </ThemeProvider>
