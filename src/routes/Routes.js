@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes as Routers } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 // import { GlobalStyles } from "../components/styles/utils/Global";
-import Index from "../pages/Index";
+import Index from "../pages/Dashboard";
 
 const theme = {
   colors: {
