@@ -3,8 +3,7 @@
 // import CenterSlider from "../components/CenterSlider";
 // import PurchaseNow from "../components/PurchaseNow";
 
-
-const Index = () => {
+const Dashboard = () => {
   return (
     <>
       {/* BEGIN: Header*/}
@@ -4328,4 +4327,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Dashboard;
